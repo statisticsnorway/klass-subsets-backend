@@ -1,0 +1,177 @@
+= Klass Subsets API Guide
+:doctype: book
+// :icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:numbered:
+:sectlinks:
+// disable web fonts, since default fetches fonts from web, which does not work in ssb's production zone
+:webfonts!:
+
+== Overview
+Klass Subsets allows a user to create lists of codes from Klass in any combination and order that the user wants, and from
+multiple Klass resources (Classifications, variants). This API will allow you to fetch these lists and will merge in additional
+data from Klass like code names and notes.
+
+=== HTTP status codes
+Klass Subsets API tries to adhere as closely as possible to standard HTTP and REST conventions in its
+use of HTTP status codes.
+
+|===
+| Status code | Usage
+
+| `200 OK`
+| The request completed successfully
+
+| `400 Bad Request`
+| The request was malformed, i.e. the client has used a not valid request. The response body will include an error providing further information
+
+| `404 Not Found`
+| The requested resource did not exist. The response body will include an error providing further information
+|===
+
+=== Errors
+Whenever an error response (status code >= 400) is returned, the body will contain an error message
+that describes the problem. For example, a request for a non-existent Subset.
+
+include::{presentationSnippets}/error-example/curl-request.adoc[]
+
+will produce a `404 Not Found` response:
+
+include::{presentationSnippets}/error-example/http-response.adoc[]
+
+
+== Subsets Resources
+
+
+[[Subsets]]
+=== Subsets
+
+
+===== Supported formats
+`application/json`
+
+===== Supported character sets
+`UTF-8`
+
+===== Example request (json)
+include::{presentationSnippets}/subset-example/curl-request.adoc[]
+
+===== Example response (json)
+include::{presentationSnippets}/subset-example/http-response.adoc[]
+
+===== Response structure
+include::{presentationSnippets}/subset-example/response-fields.adoc[]
+
+[[classification-links]]
+===== Links
+include::{presentationSnippets}/subset-example/links.adoc[]
+
+
+
+[[Versions]]
+=== Versions
+
+
+===== Supported formats
+`application/json`
+
+===== Supported character sets
+`UTF-8`
+
+===== Example request (json)
+include::{presentationSnippets}/version-example/curl-request.adoc[]
+
+===== Example response (json)
+include::{presentationSnippets}/version-example/http-response.adoc[]
+
+===== Response structure
+include::{presentationSnippets}/version-example/response-fields.adoc[]
+
+[[classification-links]]
+===== Links
+include::{presentationSnippets}/version-example/links.adoc[]
+
+
+
+//=== Codes
+//Used to get codes from a subset. A range is specified when requesting the codes,
+//and the response will for each code indicate its valid range (validFrom/validTo).
+//
+//For more information about the range see <<range, range>>. +
+//To get a snapshot of codes valid at a specified date, use <<CodesAt, CodesAt>>
+//
+//===== Supported formats
+// `application/json`
+//
+//===== Supported character sets
+//`UTF-8`
+//
+//===== Example request
+//include::{presentationSnippets}/codes-example/curl-request.adoc[]
+//
+//===== Example response
+//include::{presentationSnippets}/codes-example/http-response.adoc[]
+//
+//===== Request parameters
+//include::{presentationSnippets}/codes-optional-parameters-example/request-parameters.adoc[]
+
+
+
+=== CodesAt
+Used to get codes from a Subset. A date is specified when requesting the codes,
+and the response will include all codes valid at the specified date.
+
+===== Supported formats
+`application/json`
+
+===== Supported character sets
+`UTF-8`
+
+===== Example request
+include::{presentationSnippets}/codes-at-example/curl-request.adoc[]
+
+===== Example response
+include::{presentationSnippets}/codes-at-example/http-response.adoc[]
+
+===== Request parameters
+include::{presentationSnippets}/codes-at-optional-parameters-example/request-parameters.adoc[]
+
+===== Response structure
+include::{presentationSnippets}/codes-at-optional-parameters-example/response-fields.adoc[]
+
+== Request parameters
+//[[range]]
+//=== range
+//A range is a time period with a `from` date and a `to` date. The dates are specified in format `<yyyy-MM-dd>`.
+//`from` is inclusive and `to` is exclusive. `to` is optional, and if not specified the range is considered to continue indefinitely.
+//
+//When retrieving codes with a range it must be understood that the code may change during the range. This is indicated in result with `validFrom` and `validTo`.
+//
+//===== Example
+//A subset whose codes were updated 2014-01-01. If asking for codes for year 2013, then `validFrom/validTo` in response will be equal `from/to` in request
+//include::{presentationSnippets}/range-example/curl-request.adoc[]
+//include::{presentationSnippets}/range-example/http-response.adoc[]
+//
+//If now increasing the range to also include 2014, it is seen that some codes are not valid within the whole range. Some codes ends at 2014 and some codes starts at 2014.
+//include::{presentationSnippets}/range-extended-example/curl-request.adoc[]
+//include::{presentationSnippets}/range-extended-example/http-response.adoc[]
+
+[[language]]
+=== language
+`language` is used to specify which language data shall be presented in. Default if none is selected is NB (bokmål).
+
+Supported languages
+|===
+| Language code | Language
+| nb | Norwegian bokmål
+| nn | Norwegian nynorsk
+| en | English
+|===
+
+===== Example request for language=NB
+include::{presentationSnippets}/language-example/curl-request.adoc[]
+
+===== Example response
+include::{presentationSnippets}/language-example/http-response.adoc[]

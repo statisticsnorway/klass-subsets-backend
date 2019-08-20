@@ -1,0 +1,126 @@
+= Klass Subsets management API Guide
+:doctype: book
+// :icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:numbered:
+:sectlinks:
+// disable web fonts, since default fetches fonts from web, which does not work in ssb's production zone
+:webfonts!:
+
+== Overview
+This API is used to create, edit and manage Klass Subsets, depending on configuration you may have to be signed in/authorized to perform some operations.
+
+=== Supported formats and character sets
+in order to keep the maintenance low we have limited this api to only accept  Json and UTF-8, this may change in the future.
+
+==== Supported formats
+`application/json`
+
+==== Supported character sets
+`UTF-8`
+
+=== HTTP status codes
+Klass Subsets API tries to adhere as closely as possible to standard HTTP and REST conventions in its
+use of HTTP status codes.
+
+|===
+| Status code | Usage
+
+| `200 OK`
+| The request completed successfully
+
+| `202 ACCEPTED`
+| The request operation completed successfully
+
+| `400 Bad Request`
+| The request was malformed, i.e. the client has used a not valid request. The response body will include an error providing further information
+
+| `404 Not Found`
+| The requested resource did not exist. The response body will include an error providing further information
+|===
+
+=== Errors
+Whenever an error response (status code >= 400) is returned, the body will contain an error message
+that describes the problem. For example, a request for a non-existent Subset.
+
+include::{managementSnippets}/error-example/http-request.adoc[]
+
+will produce a `404 Not Found` response:
+
+include::{managementSnippets}/error-example/http-response.adoc[]
+
+=== Subsets
+Subsets are the top-level structures, they should have an owner/maintainer and will contain a list with one or more different versions.
+Versions will inherits some properties from their parent Subsets, for instance owner/maintainer information will included when versions get fetched.
+
+==== Create Subset
+
+===== Example request (json)
+include::{managementSnippets}/subsets-create-example/http-request.adoc[]
+
+===== Example response (json)
+include::{managementSnippets}/subsets-create-example/http-response.adoc[]
+
+
+==== Fetch Subset
+
+===== Example request
+include::{managementSnippets}/subsets-fetch-example/http-request.adoc[]
+
+===== Example response (json)
+include::{managementSnippets}/subsets-fetch-example/http-response.adoc[]
+
+==== Update Subset
+
+===== Example request (json)
+include::{managementSnippets}/subsets-update-example/http-request.adoc[]
+
+===== Example response (json)
+include::{managementSnippets}/subsets-update-example/http-response.adoc[]
+
+==== Delete Subset
+
+===== Example request
+include::{managementSnippets}/subsets-delete-example/http-request.adoc[]
+
+===== Example response (json)
+include::{managementSnippets}/subsets-delete-example/http-response.adoc[]
+
+
+=== Subset Versions
+Subsets are the top-level structures, they should have an owner/maintainer and will contain a list with one or more different versions.
+Versions will inherits some properties from their parent Subsets, for instance owner/maintainer information will included when versions get fetched.
+
+==== Create version
+
+===== Example request (json)
+include::{managementSnippets}/version-create-example/http-request.adoc[]
+
+===== Example response (json)
+include::{managementSnippets}/version-create-example/http-response.adoc[]
+
+
+==== Fetch version
+
+===== Example request (json)
+include::{managementSnippets}/version-fetch-example/http-request.adoc[]
+
+===== Example response (json)
+include::{managementSnippets}/version-fetch-example/http-response.adoc[]
+
+==== Update version
+
+===== Example request (json)
+include::{managementSnippets}/version-update-example/http-request.adoc[]
+
+===== Example response (json)
+include::{managementSnippets}/version-update-example/http-response.adoc[]
+
+==== Delete version
+===== Example request
+include::{managementSnippets}/version-delete-example/http-request.adoc[]
+
+===== Example response (json)
+include::{managementSnippets}/version-delete-example/http-response.adoc[]

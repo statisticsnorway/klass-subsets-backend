@@ -1,0 +1,134 @@
+{
+  "name": "Sivilstand 1993",
+  "validFrom": "1993-01-01",
+  "lastModified": "2016-10-07T12:06:18.000+0000",
+  "published": [
+    "nb",
+    "nn",
+    "en"
+  ],
+  "introduction": "Denne klassifiserngen av sivilstand er brukt i befolkningsstatistikken fra 1993. Fra 1. januar 2009 ble imidlertid ekteskapsloven endret slik at to personer med samme kjønn kan inngå ekteskap. Samtidig ble det ikke lenger mulig å inngå registrert partnerskap. De som allerede var registrerte partnere, kan enten fortsette som det , eller  be om å få partnerskapet sitt konvertert til ekteskap. Derfor gjelder fortsatt alle sivilstandskodene.\n\nPartnere er inkludert.",
+  "contactPerson": {
+    "name": "Andersen, Espen",
+    "email": "Espen.Andersen@ssb.no",
+    "phone": "40811335"
+  },
+  "owningSection": "320 - Seksjon for befolkningsstatistikk ",
+  "legalBase": "",
+  "publications": "Om statistikken http://www.ssb.no/vis/folkemengde/om.html",
+  "derivedFrom": "",
+  "correspondenceTables": [
+    {
+      "name": "Sivilstand 1993 - Sivilstand 1964",
+      "contactPerson": {
+        "name": "Andersen, Espen",
+        "email": "Espen.Andersen@ssb.no",
+        "phone": "40811335"
+      },
+      "owningSection": "320 - Seksjon for befolkningsstatistikk ",
+      "source": "Sivilstand 1993",
+      "target": "Sivilstand 1964",
+      "changeTable": true,
+      "lastModified": "2019-06-04T08:37:54.000+0000",
+      "published": [
+        "nb",
+        "nn",
+        "en"
+      ],
+      "sourceLevel": null,
+      "targetLevel": null,
+      "_links": {
+        "self": {
+          "href": "https://data.ssb.no/api/klass/v1/correspondencetables/447"
+        }
+      }
+    }
+  ],
+  "classificationVariants": [],
+  "changelogs": [],
+  "levels": [
+    {
+      "levelNumber": 1,
+      "levelName": "Sivilstand"
+    }
+  ],
+  "classificationItems": [
+    {
+      "code": "1",
+      "parentCode": "",
+      "level": "1",
+      "name": "Ugift",
+      "shortName": null,
+      "notes": null
+    },
+    {
+      "code": "2",
+      "parentCode": "",
+      "level": "1",
+      "name": "Gift",
+      "shortName": null,
+      "notes": null
+    },
+    {
+      "code": "3",
+      "parentCode": "",
+      "level": "1",
+      "name": "Enke/enkemann",
+      "shortName": null,
+      "notes": null
+    },
+    {
+      "code": "4",
+      "parentCode": "",
+      "level": "1",
+      "name": "Skilt",
+      "shortName": null,
+      "notes": null
+    },
+    {
+      "code": "5",
+      "parentCode": "",
+      "level": "1",
+      "name": "Separert",
+      "shortName": null,
+      "notes": null
+    },
+    {
+      "code": "6",
+      "parentCode": "",
+      "level": "1",
+      "name": "Registrert partner",
+      "shortName": null,
+      "notes": null
+    },
+    {
+      "code": "7",
+      "parentCode": "",
+      "level": "1",
+      "name": "Separert partner",
+      "shortName": null,
+      "notes": null
+    },
+    {
+      "code": "8",
+      "parentCode": "",
+      "level": "1",
+      "name": "Skilt partner",
+      "shortName": null,
+      "notes": null
+    },
+    {
+      "code": "9",
+      "parentCode": "",
+      "level": "1",
+      "name": "Gjenlevende partner",
+      "shortName": null,
+      "notes": null
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "https://data.ssb.no/api/klass/v1/versions/50"
+    }
+  }
+}

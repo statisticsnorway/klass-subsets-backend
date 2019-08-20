@@ -1,0 +1,72 @@
+{
+  "name": "Kjønn 1960",
+  "validFrom": "1960-01-01",
+  "lastModified": "2016-10-07T12:05:23.000+0000",
+  "published": [
+    "nb",
+    "nn",
+    "en"
+  ],
+  "introduction": "SSBs offisielle koder for kjønn",
+  "contactPerson": {
+    "name": "Andersen, Espen",
+    "email": "Espen.Andersen@ssb.no",
+    "phone": "40811335"
+  },
+  "owningSection": "320 - Seksjon for befolkningsstatistikk ",
+  "legalBase": "",
+  "publications": "",
+  "derivedFrom": "",
+  "correspondenceTables": [],
+  "classificationVariants": [
+    {
+      "name": "Kjønn, inkl. \"begge kjønn\" 1960  - variant av Kjønn 1960",
+      "contactPerson": {
+        "name": "Ekren, Rachel",
+        "email": "Rachel.Ekren@ssb.no",
+        "phone": "40811360"
+      },
+      "owningSection": "360 - Seksjon for utdanningsstatistikk ",
+      "lastModified": "2017-11-15T08:21:08.000+0000",
+      "published": [
+        "nb",
+        "en"
+      ],
+      "_links": {
+        "self": {
+          "href": "https://data.ssb.no/api/klass/v1/variants/802"
+        }
+      }
+    }
+  ],
+  "changelogs": [],
+  "levels": [
+    {
+      "levelNumber": 1,
+      "levelName": "Kjønn"
+    }
+  ],
+  "classificationItems": [
+    {
+      "code": "1",
+      "parentCode": "",
+      "level": "1",
+      "name": "Mann",
+      "shortName": null,
+      "notes": null
+    },
+    {
+      "code": "2",
+      "parentCode": "",
+      "level": "1",
+      "name": "Kvinne",
+      "shortName": null,
+      "notes": null
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "https://data.ssb.no/api/klass/v1/versions/14"
+    }
+  }
+}
