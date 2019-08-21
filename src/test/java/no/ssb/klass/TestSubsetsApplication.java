@@ -1,9 +1,7 @@
 package no.ssb.klass;
 
 import no.ssb.klass.subsets.applicationtests.utils.TestDataProvider;
-import no.ssb.klass.subsets.domain.Subset;
 import no.ssb.klass.subsets.domain.SubsetUser;
-import no.ssb.klass.subsets.domain.SubsetVersion;
 import no.ssb.klass.subsets.repository.SubsetUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -29,9 +27,6 @@ public class TestSubsetsApplication {
     public void addTestData() {
         SubsetUser user = TestDataProvider.CreateUserWithSetVersion();
         user = userRepository.saveAndFlush(user);
-
-        Subset set = user.getSubsets().get(0);
-        SubsetVersion version = set.getSubsetVersions().get(0);
     }
 
 }

@@ -18,7 +18,7 @@ public enum SourceType {
                 return type;
             }
         }
-        throw new RuntimeException("SourceType not found");
+        throw new UnknownSourceException(sourceOrigin, sourceType);
     }
 
     @Override

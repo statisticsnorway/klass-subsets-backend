@@ -1,6 +1,5 @@
 package no.ssb.klass.subsets.documentation;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.restdocs.generate.RestDocumentationGenerator;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
@@ -10,12 +9,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 
 public class ApiDocumentationBase {
-
-    @Value("${klass.env.server:localhost}")
-    private String server;
-    @Value("${klass.env.port:8080}")
-    private int port;
-
 
     MockHttpServletRequestBuilder get(String urlTemplate, Object... urlVariables) {
         return MockMvcRequestBuilders.get(urlTemplate, urlVariables)

@@ -22,6 +22,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SuppressWarnings({"PMD.JUnitTestsShouldIncludeAssert"})
 public class PresentationControllerTest {
 
     @Autowired

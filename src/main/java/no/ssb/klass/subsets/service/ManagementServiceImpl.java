@@ -181,7 +181,7 @@ public class ManagementServiceImpl implements ManagementService {
     private void mapAndSaveVersion(SubsetVersionDto dto, SubsetVersion version) {
         Optional<Subset> optionalSubset = subsetRepository.findById(dto.getSubsetId());
         if (optionalSubset.isEmpty()) {
-            throw new RuntimeException("Super set with id" + dto.getSubsetId() + " not found");
+            throw new ResourceNotFoundException("Super set with id" + dto.getSubsetId() + " not found");
         }
 
         version.setParent(optionalSubset.get());

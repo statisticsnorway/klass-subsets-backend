@@ -23,6 +23,7 @@ import static no.ssb.klass.subsets.provider.utils.RestConstants.REST_MANAGMENT_U
 //@Ignore
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SuppressWarnings({"PMD.JUnitTestsShouldIncludeAssert"})
 public class managementControllerTest {
 
     @Autowired

@@ -62,7 +62,7 @@ public class PresentationApiDocumentationTest extends ApiDocumentationBase {
     private SubsetVersion version;
 
     @Before
-    public void setup() {
+    public void setUp() {
         databaseUtil.clearDatabase();
         createTestData();
         prepareTestHandlers();

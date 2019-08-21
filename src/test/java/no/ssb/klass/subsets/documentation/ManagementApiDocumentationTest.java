@@ -58,14 +58,11 @@ public class ManagementApiDocumentationTest extends ApiDocumentationBase {
 
     private long versionId;
 
-    private Subset set;
-    private SubsetVersion version;
-
     @Autowired
     private ObjectMapper jsonMapper;
 
     @Before
-    public void setup() {
+    public void setUp() {
         databaseUtil.clearDatabase();
         prepareTestHandlers();
         createTestData();
@@ -84,8 +81,8 @@ public class ManagementApiDocumentationTest extends ApiDocumentationBase {
         SubsetUser user = TestDataProvider.CreateUserWithSetVersion();
         user = userRepository.saveAndFlush(user);
 
-        set = user.getSubsets().get(0);
-        version = set.getSubsetVersions().get(0);
+        Subset set = user.getSubsets().get(0);
+        SubsetVersion version = set.getSubsetVersions().get(0);
 
         setId = set.getId();
         versionId = version.getId();

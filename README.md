@@ -1,13 +1,13 @@
 # Klass Subsets backend
 
 ### Development Requirements
-* Java 11
-* Ide with support for Lombok plugin (IntelliJ recommended) 
+*  Java 11
+*  Ide with support for Lombok plugin (IntelliJ recommended) 
 
 #### Note on Lombok
 Lombok is a plugin that simplifies and handles a lot boilerplate code using annotations.
 In this project we have used the `@Data` annotation heavily which automatically generates getters, setters, equals etc. for us.
-For more info and a quick introduction see the 4 min intro video on  https://projectlombok.org/
+For more info and a quick introduction see the 4 min intro video on [projectlombok.org](https://projectlombok.org/)
 
 ### Deployment
 This application is intended to run as a self-contained java 11 application and service configuration and auto start must be configured on the server that the application will be deployed to.
@@ -22,9 +22,9 @@ and info on how to gracefully shutdown the application can be found here
 If you run the application locally you will find documentation for the 2 APIs that the application provides on the following urls. 
 (note that you need to build the application with maven for the documentation to be generated)
 
-http://localhost:8080/subsets/v1/view/api-guide.html (view)
+`http://localhost:8080/subsets/v1/view/api-guide.html` (view)
 
-http://localhost:8080/subsets/v1/edit/api-guide.html (edit)
+`http://localhost:8080/subsets/v1/edit/api-guide.html` (edit)
 
 View API is intended for consumers that just need the data and has more consumer friendly endpoints.
 

@@ -12,10 +12,6 @@ import javax.persistence.*;
 @AllArgsConstructor
 class SubsetLocalization {
 
-    SubsetLocalization(String locale) {
-        localizedId.setLocale(locale);
-    }
-
     @EmbeddedId
     private LocalizedId localizedId = new LocalizedId();
 
@@ -29,4 +25,8 @@ class SubsetLocalization {
 
     @Column(nullable = false)
     private String description;
+
+    SubsetLocalization(String locale) {
+        localizedId.setLocale(locale);
+    }
 }
