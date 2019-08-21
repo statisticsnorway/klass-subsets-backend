@@ -51,8 +51,6 @@ public class ManagementApiDocumentationTest extends ApiDocumentationBase {
     @Autowired
     private DatabaseUtil databaseUtil;
 
-    private RestDocumentationResultHandler documentationHandler;
-
     private MockMvc mockMvc;
 
     private long setId;
@@ -70,12 +68,12 @@ public class ManagementApiDocumentationTest extends ApiDocumentationBase {
     }
 
     private void prepareTestHandlers() {
-        this.documentationHandler = document("{method-name}", preprocessRequest(prettyPrint()),
+        RestDocumentationResultHandler documentationHandler = document("{method-name}", preprocessRequest(prettyPrint()),
                 preprocessResponse(prettyPrint()));
 
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context)
                 .apply(documentationConfiguration(this.restDocumentation))
-                .alwaysDo(this.documentationHandler).build();
+                .alwaysDo(documentationHandler).build();
     }
 
     private void createTestData() {

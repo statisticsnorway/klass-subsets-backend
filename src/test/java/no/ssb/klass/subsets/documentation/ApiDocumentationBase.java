@@ -10,24 +10,24 @@ import java.net.URI;
 
 public class ApiDocumentationBase {
 
-    MockHttpServletRequestBuilder get(String urlTemplate, Object... urlVariables) {
+    protected MockHttpServletRequestBuilder get(String urlTemplate, Object... urlVariables) {
         return MockMvcRequestBuilders.get(urlTemplate, urlVariables)
                 .requestAttr(RestDocumentationGenerator.ATTRIBUTE_NAME_URL_TEMPLATE, urlTemplate);
     }
 
-    MockHttpServletRequestBuilder delete(String urlTemplate, Object... urlVariables) {
+    protected MockHttpServletRequestBuilder delete(String urlTemplate, Object... urlVariables) {
         return MockMvcRequestBuilders.delete(urlTemplate, urlVariables)
                 .requestAttr(RestDocumentationGenerator.ATTRIBUTE_NAME_URL_TEMPLATE, urlTemplate);
     }
 
-    MockHttpServletRequestBuilder post(String urlTemplate, String payload) {
+    protected MockHttpServletRequestBuilder post(String urlTemplate, String payload) {
         return MockMvcRequestBuilders.post(urlTemplate)
                 .content(payload)
                 .contentType(MediaType.APPLICATION_JSON)
                 .requestAttr(RestDocumentationGenerator.ATTRIBUTE_NAME_URL_TEMPLATE, urlTemplate);
     }
 
-    MockHttpServletRequestBuilder put(String urlTemplate, String payload) {
+    protected MockHttpServletRequestBuilder put(String urlTemplate, String payload) {
         return MockMvcRequestBuilders.put(urlTemplate)
                 .content(payload)
                 .contentType(MediaType.APPLICATION_JSON)

@@ -1,8 +1,8 @@
 # Klass Subsets backend
 
 ### Development Requirements
-  * Java 11
-  * Ide with support for Lombok plugin (IntelliJ recommended) 
+*  Java 11
+*  Ide with support for Lombok plugin (IntelliJ recommended) 
 
 #### Note on Lombok
 Lombok is a plugin that simplifies and handles a lot boilerplate code using annotations.

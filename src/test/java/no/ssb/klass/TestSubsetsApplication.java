@@ -15,13 +15,12 @@ import javax.annotation.PostConstruct;
 @SpringBootApplication
 public class TestSubsetsApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(TestSubsetsApplication.class, args);
-    }
-
     @Autowired
     SubsetUserRepository userRepository;
 
+    public static void main(String[] args) {
+        SpringApplication.run(TestSubsetsApplication.class, args);
+    }
 
     @PostConstruct
     public void addTestData() {

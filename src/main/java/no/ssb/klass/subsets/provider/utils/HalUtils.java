@@ -38,7 +38,7 @@ public class HalUtils {
 
 
     public static Link createCodesAtRelation(Long id) {
-        ControllerLinkBuilder linkBuilder = linkTo(ControllerLinkBuilder.methodOn(PresentationController.class).getCodesAt(id, LocalDate.now(), Language.EN));
+        ControllerLinkBuilder linkBuilder = linkTo(methodOn(PresentationController.class).getCodesAt(id, LocalDate.now(), Language.EN));
         return new Link(HalUtils.createUriTemplate(linkBuilder, date()), "codesAt");
     }
 
