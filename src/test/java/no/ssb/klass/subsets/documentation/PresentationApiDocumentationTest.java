@@ -36,6 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
+@SuppressWarnings({"PMD.JUnitTestsShouldIncludeAssert"})
 public class PresentationApiDocumentationTest extends ApiDocumentationBase {
 
     @Rule
@@ -79,7 +80,7 @@ public class PresentationApiDocumentationTest extends ApiDocumentationBase {
 
 
     private void createTestData() {
-        SubsetUser user = TestDataProvider.CreateUserWithSetVersion();
+        SubsetUser user = TestDataProvider.createUserWithSetVersion();
         user = userRepository.saveAndFlush(user);
 
         set = user.getSubsets().get(0);

@@ -37,7 +37,7 @@ public class PresentationControllerTest {
 
     @Before
     public void createTestDataAndMockDependencies() {
-        SubsetUser user = TestDataProvider.CreateUserWithSetVersion();
+        SubsetUser user = TestDataProvider.createUserWithSetVersion();
         user = userRepository.saveAndFlush(user);
 
         Subset set = user.getSubsets().get(0);

@@ -1,5 +1,7 @@
 package no.ssb.klass.subsets.domain.utils;
 
+import no.ssb.klass.subsets.domain.exceptions.UnsupportedSourceException;
+
 public enum SourceType {
     KLASS_VERSION("Klass", "ClassificationSeries"),
     KLASS_VARIANT("Klass", "ClassificationSeriesVariant");
@@ -18,7 +20,7 @@ public enum SourceType {
                 return type;
             }
         }
-        throw new UnknownSourceException(sourceOrigin, sourceType);
+        throw new UnsupportedSourceException(sourceOrigin, sourceType);
     }
 
     @Override

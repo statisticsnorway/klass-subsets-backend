@@ -25,7 +25,7 @@ public class TestSubsetsApplication {
 
     @PostConstruct
     public void addTestData() {
-        SubsetUser user = TestDataProvider.CreateUserWithSetVersion();
+        SubsetUser user = TestDataProvider.createUserWithSetVersion();
         user = userRepository.saveAndFlush(user);
     }
 

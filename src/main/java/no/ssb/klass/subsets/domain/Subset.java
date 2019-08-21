@@ -2,6 +2,7 @@ package no.ssb.klass.subsets.domain;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import no.ssb.klass.subsets.domain.exceptions.LocalisationMissingException;
 
 import javax.persistence.*;
 import java.util.*;
@@ -58,8 +59,7 @@ public class Subset extends BaseEntity {
 
     private void throwErrorIfLocaleIsMissing(String locale) {
         if (!localizations.containsKey(locale)) {
-            //TODO custom exception ?
-            throw new RuntimeException("No locale:" + locale);
+            throw new LocalisationMissingException(this, locale);
         }
     }
 

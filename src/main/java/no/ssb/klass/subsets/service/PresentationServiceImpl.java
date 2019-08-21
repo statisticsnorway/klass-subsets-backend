@@ -5,6 +5,7 @@ import no.ssb.klass.subsets.common.Language;
 import no.ssb.klass.subsets.consumer.klass.KlassConsumer;
 import no.ssb.klass.subsets.consumer.klass.resources.SourceData;
 import no.ssb.klass.subsets.domain.*;
+import no.ssb.klass.subsets.domain.exceptions.UnsupportedSourceException;
 import no.ssb.klass.subsets.provider.exceptions.ResourceNotFoundException;
 import no.ssb.klass.subsets.provider.presentation.*;
 import no.ssb.klass.subsets.provider.utils.HalUtils;
@@ -179,7 +180,7 @@ public class PresentationServiceImpl implements PresentationService {
                     //TODO variant
                     break;
                 default:
-                    throw new RuntimeException("unsupported source type");
+                    throw new UnsupportedSourceException(source.getSource());
             }
         }
         return sourcesMap;

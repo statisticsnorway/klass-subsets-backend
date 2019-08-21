@@ -24,7 +24,7 @@ import static no.ssb.klass.subsets.provider.utils.RestConstants.REST_MANAGMENT_U
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @SuppressWarnings({"PMD.JUnitTestsShouldIncludeAssert"})
-public class managementControllerTest {
+public class ManagementControllerTest {
 
     @Autowired
     SubsetUserRepository userRepository;
@@ -40,7 +40,7 @@ public class managementControllerTest {
 
     @Before
     public void createTestDataAndMockDependencies() {
-        SubsetUser user = TestDataProvider.CreateUserWithSetVersion();
+        SubsetUser user = TestDataProvider.createUserWithSetVersion();
         user = userRepository.saveAndFlush(user);
 
         Subset set = user.getSubsets().get(0);

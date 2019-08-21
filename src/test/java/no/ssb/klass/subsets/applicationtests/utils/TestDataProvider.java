@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 public class TestDataProvider {
 
-    public static SubsetUser CreateUserWithSetVersion() {
+    public static SubsetUser createUserWithSetVersion() {
         SubsetUser user = createTestUser();
         Subset set = createTestSet(false);
         SubsetVersion version = createTestVersion();

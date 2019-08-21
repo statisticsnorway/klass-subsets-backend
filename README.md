@@ -1,8 +1,8 @@
 # Klass Subsets backend
 
 ### Development Requirements
-*  Java 11
-*  Ide with support for Lombok plugin (IntelliJ recommended) 
+  * Java 11
+  * Ide with support for Lombok plugin (IntelliJ recommended) 
 
 #### Note on Lombok
 Lombok is a plugin that simplifies and handles a lot boilerplate code using annotations.
@@ -16,7 +16,6 @@ Examples on how to set up a service can be found here [Create an Init Script](ht
 
 and info on how to gracefully shutdown the application can be found here
 [Gracefully killing a Java process managed by systemd](https://stegard.net/2016/08/gracefully-killing-a-java-process-managed-by-systemd/)
-
 
 ### Testing
 If you run the application locally you will find documentation for the 2 APIs that the application provides on the following urls. 
@@ -35,7 +34,6 @@ You can use `SubsetsApplication` to run the application in intelliJ, or run `Tes
 ## Current state of the application
 Most of the application is Work In Progress, the Edit API is mostly a proof of concept and is expected to change a lot, 
 there are currently no security mechanisms protecting the data but authentication and login is on the road map.
-
 
 The View API has currently very limited features but depending on demand it may be expanded to support some of the same 
 features as Klass API provides for ClassificationSeries.

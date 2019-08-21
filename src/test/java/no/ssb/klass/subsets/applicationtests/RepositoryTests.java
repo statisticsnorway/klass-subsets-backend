@@ -19,7 +19,7 @@ public class RepositoryTests {
 
     @Test
     public void canPersistData() {
-        SubsetUser subsetUser = TestDataProvider.CreateUserWithSetVersion();
+        SubsetUser subsetUser = TestDataProvider.createUserWithSetVersion();
         SubsetUser savedUser = userRepository.saveAndFlush(subsetUser);
         Assert.assertNotNull(savedUser.getId());
 
