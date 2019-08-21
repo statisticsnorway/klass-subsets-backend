@@ -1,5 +1,7 @@
 # Klass Subsets backend
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4712502e8cc241a88ae4b7914b8e9a60)](https://app.codacy.com/app/statisticsnorway/klass-subsets-backend?utm_source=github.com&utm_medium=referral&utm_content=statisticsnorway/klass-subsets-backend&utm_campaign=Badge_Grade_Settings)
+
 ### Development Requirements
   * Java 11
   * Ide with support for Lombok plugin (IntelliJ recommended) 
