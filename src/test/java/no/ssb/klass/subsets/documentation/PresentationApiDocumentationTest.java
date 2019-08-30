@@ -70,7 +70,8 @@ public class PresentationApiDocumentationTest extends ApiDocumentationBase {
     }
 
     private void prepareTestHandlers() {
-        this.documentationHandler = document("{method-name}", preprocessRequest(prettyPrint()),
+        this.documentationHandler = document("{method-name}",
+                preprocessRequest(prettyPrint()),
                 preprocessResponse(prettyPrint()));
 
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context)

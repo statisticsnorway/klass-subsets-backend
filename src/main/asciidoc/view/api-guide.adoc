@@ -35,7 +35,7 @@ use of HTTP status codes.
 Whenever an error response (status code >= 400) is returned, the body will contain an error message
 that describes the problem. For example, a request for a non-existent Subset.
 
-include::{presentationSnippets}/error-example/curl-request.adoc[]
+include::{presentationSnippets}/error-example/http-request.adoc[]
 
 will produce a `404 Not Found` response:
 
@@ -56,7 +56,7 @@ include::{presentationSnippets}/error-example/http-response.adoc[]
 `UTF-8`
 
 ===== Example request (json)
-include::{presentationSnippets}/subset-example/curl-request.adoc[]
+include::{presentationSnippets}/subset-example/http-request.adoc[]
 
 ===== Example response (json)
 include::{presentationSnippets}/subset-example/http-response.adoc[]
@@ -81,7 +81,7 @@ include::{presentationSnippets}/subset-example/links.adoc[]
 `UTF-8`
 
 ===== Example request (json)
-include::{presentationSnippets}/version-example/curl-request.adoc[]
+include::{presentationSnippets}/version-example/http-request.adoc[]
 
 ===== Example response (json)
 include::{presentationSnippets}/version-example/http-response.adoc[]
@@ -109,7 +109,7 @@ include::{presentationSnippets}/version-example/links.adoc[]
 //`UTF-8`
 //
 //===== Example request
-//include::{presentationSnippets}/codes-example/curl-request.adoc[]
+//include::{presentationSnippets}/codes-example/http-request.adoc[]
 //
 //===== Example response
 //include::{presentationSnippets}/codes-example/http-response.adoc[]
@@ -130,7 +130,7 @@ and the response will include all codes valid at the specified date.
 `UTF-8`
 
 ===== Example request
-include::{presentationSnippets}/codes-at-example/curl-request.adoc[]
+include::{presentationSnippets}/codes-at-example/http-request.adoc[]
 
 ===== Example response
 include::{presentationSnippets}/codes-at-example/http-response.adoc[]
@@ -151,11 +151,11 @@ include::{presentationSnippets}/codes-at-optional-parameters-example/response-fi
 //
 //===== Example
 //A subset whose codes were updated 2014-01-01. If asking for codes for year 2013, then `validFrom/validTo` in response will be equal `from/to` in request
-//include::{presentationSnippets}/range-example/curl-request.adoc[]
+//include::{presentationSnippets}/range-example/http-request.adoc[]
 //include::{presentationSnippets}/range-example/http-response.adoc[]
 //
 //If now increasing the range to also include 2014, it is seen that some codes are not valid within the whole range. Some codes ends at 2014 and some codes starts at 2014.
-//include::{presentationSnippets}/range-extended-example/curl-request.adoc[]
+//include::{presentationSnippets}/range-extended-example/http-request.adoc[]
 //include::{presentationSnippets}/range-extended-example/http-response.adoc[]
 
 [[language]]
@@ -171,7 +171,7 @@ Supported languages
 |===
 
 ===== Example request for language=NB
-include::{presentationSnippets}/language-example/curl-request.adoc[]
+include::{presentationSnippets}/language-example/http-request.adoc[]
 
 ===== Example response
 include::{presentationSnippets}/language-example/http-response.adoc[]

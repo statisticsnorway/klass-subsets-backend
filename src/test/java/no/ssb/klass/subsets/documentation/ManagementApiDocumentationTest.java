@@ -68,7 +68,8 @@ public class ManagementApiDocumentationTest extends ApiDocumentationBase {
     }
 
     private void prepareTestHandlers() {
-        RestDocumentationResultHandler documentationHandler = document("{method-name}", preprocessRequest(prettyPrint()),
+        RestDocumentationResultHandler documentationHandler = document("{method-name}",
+                preprocessRequest(prettyPrint()),
                 preprocessResponse(prettyPrint()));
 
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context)
