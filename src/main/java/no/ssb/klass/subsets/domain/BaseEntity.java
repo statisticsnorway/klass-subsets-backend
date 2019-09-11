@@ -19,7 +19,7 @@ public abstract class BaseEntity {
     private int version;
 
     @Column(nullable = false)
-    private Date lastModified;
+    private Date lastModified = new Date(System.currentTimeMillis());
 
     @PreUpdate
     protected void update() {
